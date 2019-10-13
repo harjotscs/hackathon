@@ -7,6 +7,7 @@ const profileRoutes = require('./routes/profile')
 const bodyParser = require('body-parser')
 // const expressLayouts = require('express-ejs-layouts')
 const session = require('express-session')
+const cors = require('cors')
 const passport = require('passport')
 const app = express()
 const port = process.env.PORT || 3000
@@ -17,6 +18,9 @@ mongoose.connect(keys.mongoDB.mongoURL, {useUnifiedTopology:true, useCreateIndex
 .then(() => console.log('connected to server'))
 .catch((err) => console.log(err))
 
+
+//enabling cors
+app.use(cors())
 //passport config
 require('./config/passport')(passport)
 
@@ -60,4 +64,19 @@ app.get('*', (req, res, next) => {
   next()
 })
 
+app.get('/udacity', (req, res) => {
+  res.render('ud')
+})
+
+app.get('/youtube', (req, res) => {
+  res.render('y')
+})
+
+app.get('/udemy', (req, res) => {
+  res.render('u')
+})
+
+app.get('/api', (req, res) => {
+  res.render('api')
+})
 app.listen(port, () => console.log(`server is up on port ${port}`))

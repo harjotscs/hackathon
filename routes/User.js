@@ -67,8 +67,9 @@ route.get('/logout', (req, res) => {
     req.logout()
     res.redirect('/')
 })
+
 //idea get route
-route.get('/ideas', (req, res) => {
+route.get('/ideas', passport.authenticate('local', {session:false}), (req, res) => {
     res.render('type')
 })
 
@@ -87,7 +88,7 @@ route.post('/ideas', (req, res) => {
 
 const posts = Post.find({})
 //getting all post in on place
-route.get('/posts', (req,res) => {
+route.get('/posts', passport.authenticate('local', {session:false}) ,(req,res) => {
     posts.exec((err, data) => {
         if(err) throw err
         res.render('post', {postData:data})
