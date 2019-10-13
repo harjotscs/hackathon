@@ -79,4 +79,5 @@ app.get('/udemy', (req, res) => {
 app.get('/api', (req, res) => {
   res.render('api')
 })
+
 app.listen(port, () => console.log(`server is up on port ${port}`))

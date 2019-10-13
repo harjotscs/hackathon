@@ -7,16 +7,36 @@
     <title>Document</title>
 </head>
 <body>
-    
-
+    <form>
+        <input id="input" name="user" />
+        <button id="submit" type="btn">Click</button>
+    </form>
+     <p id="demo"></p>
+     <p id="demo2"></p>
+     <p id="demo3"></p>
     <script>
+       const user = document.getElementById('input')
+        const demo = document.getElementById('demo')
+        const demo2 = document.getElementById('demo2')
+        const demo3 = document.getElementById('demo3')
+         const getData = () => {
+             return fetch('https://api.github.com/'+user)
+             .then(response => response.json())
+             .then(data => {
+                 const name = data.login
+                 
+                 const followers = data.followers
+             })
+         }
+         
+         demo.innerHTML = name
         
-        getData()
-        async function getData() {
-            const response = await fetch('')
-            const data = await response.json()
-            console.log(data)
-        }
+         demo3.innerHTML = followers
+         const btn = document.getElementById('btn').addEventListener('click', getData)
+         getData()
+
+
+         
      </script>
 </body>
 </html>
