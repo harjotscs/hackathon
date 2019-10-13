@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+<script src="/dist/svg-worldmap.js"></script>
+<script src="https://kit.fontawesome.com/4ec2604471.js" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+    <style>
+      .navbar{
+        z-index: 4;
+        position:fixed;
+        width:100%;
+      }
+     .d-block{
+        height:650px;
+        background-attachment: fixed;
+      }
+      .ino{
+        color:white;
+        position: absolute;
+        font-family:"montserrat",sans-serif;
+        margin-left:200px;
+        margin-top:500px;
+        font-size:83px;
+      }
+      .box{
+        height:500px;
+      }
+      .card1{
+        position:absolute;
+        margin-top:20px;
+        margin-left:150px;
+        border:1px solid black;
+        box-shadow: 0 40px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+      .card2{
+        position:absolute;
+        margin-top:20px;
+        margin-left:650px;
+        border:1px solid black;
+        box-shadow: 0 40px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+      .card3{
+        position:absolute;
+        margin-top:20px;
+        margin-left:1150px;
+        border:1px solid black;
+        box-shadow: 0 40px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+      .card2 img{
+        border:1px solid black;
+      }
+      .ino2{
+        color:white;
+        position: absolute;
+        font-family:"montserrat",sans-serif;
+        margin-left:200px;
+        margin-top:300px;
+        font-size:83px;
+      }
+      .ino3{
+        color:white;
+        position: absolute;
+        font-family:"montserrat",sans-serif;
+        margin-left:200px;
+        margin-top:300px;
+        font-size:83px;
+      }
+      .next{
+        width:100%;
+        height:400px;
+        background-attachment: fixed;
+        background-size:cover;
+        font-family:'Times New Roman', Times, serif;
+      }
+      .op{
+        text-align: center;
+        color:white;
+        font-size:43px;
+      }
+      .box2{
+        background-color:darkorange;
+        width:200px;
+        height:80px;
+        margin-left:1100px;
+        margin-top:100px;
+
+      }
+      .box2 p{
+        position: absolute;
+        color:white;
+        text-align: center;
+        margin-top:20px;
+        margin-left:25px;
+        font-size:29px;
+        font-family:"montserrat",sans-serif;
+      }
+      .box2:hover{
+        background-color:white;
+        -webkit-text-fill-color: black;
+      }
+      .vate{
+        position:absolute;
+        color:white;
+        margin-right:800px;
+        margin-left:200px;
+        margin-top:60px;
+        font-size:23px;
+        font-family:tahoma;
+      }
+      .new{
+        width:100%;
+        height:800px;
+      }
+      .ok{
+        position:absolute;
+        width:500px;
+        height:700px;
+        margin-top:30px;
+        margin-left:1000px;
+      }
+      .lead{
+        position: absolute;
+        font-size:40px;
+        color:black;
+        margin-left:300px;
+        margin-top:30px;
+      }
+      .ok2{
+        position:absolute;
+        width:150px;
+        height:150px;
+        border-radius:50%;
+        margin-left:30px;
+        margin-top:30px;
+      }
+      .on{
+        position:absolute;
+        width:700px;
+        height:200px;
+        background-color:grey;
+        margin-top:100px;
+        margin-left:30px;
+        border-radius:50px;
+      }
+      .on2{
+        position:absolute;
+        width:700px;
+        height:200px;
+        background-color:grey;
+        margin-top:350px;
+        margin-left:30px;
+        border-radius:50px;
+      }
+      .one{
+        background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("/images/12.jpg");
+        background-size:cover;
+        background-repeat:no-repeat;
+        background-attachment: fixed;
+        overflow: hidden;
+      }
+      .l1{
+        color:white;
+        font-size:55px;
+        text-align: center;
+      }
+      .card-img-top{
+        height:300px;
+      }
+      .card-img{
+        height:600px;
+        opacity:.1;
+      }
+    .btn-primary{
+        margin-top:50px;
+        padding:10px 90px;
+        background-color:darkorange;
+        border:none;
+        border-radius: 20px;
+      }
+       .mb-0{
+        color:white;
+       }
+       .xtra{
+         height:120px;
+       }
+       .card-img-overlay h1{
+         font-size:80px;
+       }
+       .card-body{
+         width:400px;
+       }
+       .card-text{
+         margin-right:40px;
+       }
+       #p1{
+         margin-left:80px;
+         margin-right:80px;
+       }
+      
+       .more{
+         margin-top:50px;
+       }
+       body{
+         background-color:white;
+       }
+       .navbar-brand,.nav-link{
+           color:white;
+       }
+         </style>
+</head>
+<body>
+    
+        <nav class="navbar navbar-expand-lg navbar-primary bg-dark" >
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" id="first">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/profile/idea">Idea</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">LOG IN</a>
+                    <a class="dropdown-item" href="#">SIGN UP</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">contact us</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="text-decoration: none;">
+                    <a href="/user/register">SIGN IN</a></button> &nbsp;
+                
+
+                
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                    <a href="/user/login">LOG IN</a></button>
+                 
+              </form>
+            </div>
+          </nav>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+    </script>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <p class="ino">WELCOME INNOVATORS</p>
+            <img src="/images/2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <p class="ino2">DISCUSS YOUR IDEAS</p>
+          <img src="/images/9.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <p class="ino3">LEARN AND IMPLIMENT</p>
+            <img src="/images/10.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <div class="more">
+
+      </div>
+      <div class="container">
+          <div class="card-deck">
+              <div class="card">
+                <img src="/images/4.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+              <div class="card">
+                <img src="/images/5.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text" id="pp">This card has supporting text below as a natural lead-in to additional content.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+              <div class="card">
+                <img src="/images/6.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+</div>
+</div>
+    <div class="one">
+  <h1 class="l1">Leader's Thought</h1>
+<div class="card-deck" id="p1">
+    <div class="card">
+      <img class="card-img-top" src="/images/15.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="/images/13.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="/images/15.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="xtra"></div>
+</div>
+    <script async>(function(w, d) { w.CollectId = "5da1cb17f87b57461adc9c99"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script>
+    <div id="dropDownSelect1"></div>
+    <div class="card bg-dark text-white">
+        <img class="card-img" src="/images/11.jpg" alt="Card image">
+        <div class="card-img-overlay">
+          <h1>Follow Your Dreams</h1>
+          <h5 class="card-title">Creativity, as has been said, consists largely of rearranging what we know in order to find out what we do not know. Hence, to think creatively, we must be able to look afresh at what we normally take for granted.</h5>
+          <p class="card-text">It's easy to come up with new ideas; the hard part is letting go of what worked for you two years ago, but will soon be out of date.</p>
+          <p class="card-text">No great discovery was ever made without a bold guess.</p>
+          <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+              REGISTER
+            </button>
+        </div>
+      </div>
+    </div>
+<!-- Footer -->
+<footer class="page-footer font-small unique-color-dark">
+
+    <div style="background-color:grey">
+      <div class="container">
+  
+        <!-- Grid row-->
+        <div class="row py-4 d-flex align-items-center">
+  
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+            <h6 class="mb-0">Get connected with us on social networks!</h6>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-7 text-center text-md-right">
+  
+            <!-- Facebook -->
+            <a class="fb-ic">
+              <i class="fab fa-facebook-f white-text mr-4"> </i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic">
+              <i class="fab fa-twitter white-text mr-4"> </i>
+            </a>
+            <!-- Google +-->
+            <a class="gplus-ic">
+              <i class="fab fa-google-plus-g white-text mr-4"> </i>
+            </a>
+            <!--Linkedin -->
+            <a class="li-ic">
+              <i class="fab fa-linkedin-in white-text mr-4"> </i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic">
+              <i class="fab fa-instagram white-text"> </i>
+            </a>
+  
+          </div>
+          <!-- Grid column -->
+  
+        </div>
+        <!-- Grid row-->
+  
+      </div>
+    </div>
+  
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left mt-5">
+  
+      <!-- Grid row -->
+      <div class="row mt-3">
+  
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+  
+          <!-- Content -->
+          <h6 class="text-uppercase font-weight-bold">Company name</h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
+            consectetur
+            adipisicing elit.</p>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+  
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">Products</h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <a href="#!">MDBootstrap</a>
+          </p>
+          <p>
+            <a href="#!">MDWordPress</a>
+          </p>
+          <p>
+            <a href="#!">BrandFlow</a>
+          </p>
+          <p>
+            <a href="#!">Bootstrap Angular</a>
+          </p>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+  
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <a href="#!">Your Account</a>
+          </p>
+          <p>
+            <a href="#!">Become an Affiliate</a>
+          </p>
+          <p>
+            <a href="#!">Shipping Rates</a>
+          </p>
+          <p>
+            <a href="#!">Help</a>
+          </p>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+  
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">Contact</h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+          <p>
+            <i class="fas fa-envelope mr-3"></i> info@example.com</p>
+          <p>
+            <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+          <p>
+            <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+  
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row -->
+  
+    </div>
+    <!-- Footer Links -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+      <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+</body>
+</html>
